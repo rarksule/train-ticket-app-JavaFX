@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutY="25.0" prefHeight="400.0" prefWidth="760.0">
+         <items>
+            <AnchorPane fx:id="side" maxWidth="195.0" prefHeight="398.0" prefWidth="195.0">
+               <children>
+                  <ImageView fitHeight="212.0" fitWidth="213.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@IMAGE/ICON.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="1.0" layoutY="280.0" prefHeight="61.0" prefWidth="212.0" text="LOGIN" textFill="#979001">
+                     <font>
+                        <Font name="Algerian" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="topmain" prefHeight="398.0" prefWidth="548.0">
+               <children>
+                  <Button fx:id="signup" layoutX="130.0" layoutY="288.0" mnemonicParsing="false" onAction="#signbtn" prefHeight="42.0" prefWidth="75.0" style="-fx-background-color: FF9100;" text="SIGNUP" textFill="BLUE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                  <TextField fx:id="uname" layoutX="192.0" layoutY="123.0" prefHeight="30.0" prefWidth="230.0" />
+                  <PasswordField fx:id="pass" layoutX="192.0" layoutY="203.0" prefHeight="31.0" prefWidth="230.0" />
+                  <Button fx:id="back" layoutY="-1.0" mnemonicParsing="false" onAction="#backbtn" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: blue;" text="⬅" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Label contentDisplay="CENTER" layoutX="42.0" layoutY="123.0" prefHeight="31.0" prefWidth="115.0" style="-fx-text-fill: red;" text="USER NAME">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="42.0" layoutY="204.0" prefHeight="30.0" prefWidth="115.0" style="-fx-text-fill: red;" text="PASSWORD">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="login" layoutX="301.0" layoutY="288.0" mnemonicParsing="false" onAction="#loginbtn" prefHeight="42.0" prefWidth="75.0" style="-fx-background-color: white;" text="LOGIN" textAlignment="CENTER">
+                     <font>
+                        <Font name="Book Antiqua Bold Italic" size="14.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endY="0.018957345971563955" startX="0.6066350710900474" startY="0.6208530805687205">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.0925113707780838" green="0.06530214101076126" blue="0.8815789222717285" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.7763158082962036" green="0.06109892949461937" blue="0.06109892949461937" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <MenuBar fx:id="menubar" prefHeight="25.0" prefWidth="760.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#Quitbtn" text="Quit" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#contact" text="Contact Us" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false">
+               <graphic>
+                  <Label id="abt" onMouseClicked="#developers" text="About Us" />
+               </graphic>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Themes">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#def" text="default" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#gre" text="green" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#red" text="red" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#dark" text="dark" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

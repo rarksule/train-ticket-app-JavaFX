@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PreviewController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutY="25.0" prefHeight="400.0" prefWidth="760.0">
+         <items>
+            <AnchorPane fx:id="side" maxWidth="200.0" prefHeight="398.0" prefWidth="195.0">
+               <children>
+                  <ImageView fitHeight="212.0" fitWidth="213.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@IMAGE/ICON.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="1.0" layoutY="280.0" prefHeight="61.0" prefWidth="212.0" text="DASHBOARD" textFill="#170ad0">
+                     <font>
+                        <Font name="Algerian" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="topmain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="548.0">
+               <children>
+                  <ScrollPane layoutY="40.0" prefHeight="358.0" prefWidth="548.0">
+                     <content>
+                        <TableView id="topmain" fx:id="tablev" prefHeight="356.0" prefWidth="682.0">
+                           <columns>
+                              <TableColumn fx:id="nop" prefWidth="31.0" sortable="false" text="CNO" />
+                              <TableColumn fx:id="fnamep" minWidth="15.0" prefWidth="75.0" sortable="false" text="FIRST NAME" />
+                              <TableColumn fx:id="lnamep" minWidth="15.0" prefWidth="75.0" sortable="false" text="LAST NAME" />
+                              <TableColumn fx:id="phonep" minWidth="15.0" prefWidth="110.0" sortable="false" text="PHONE" />
+                              <TableColumn fx:id="seatp" minWidth="15.0" prefWidth="90.0" sortable="false" text="SEAT" />
+                              <TableColumn fx:id="seatno" prefWidth="30.0" sortable="false" text="SNO" />
+                              <TableColumn fx:id="departp" minWidth="15.0" prefWidth="90.0" sortable="false" text="DEPARTURE" />
+                              <TableColumn fx:id="destp" minWidth="15.0" prefWidth="90.0" sortable="false" text="DESTINATION" />
+                              <TableColumn fx:id="genderp" minWidth="5.0" prefWidth="30.0" sortable="false" text="SEX" />
+                              <TableColumn fx:id="datep" prefWidth="85.0" text="Date" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+                  <Pane fx:id="pane" prefHeight="40.0" prefWidth="548.0">
+                     <children>
+                        <Button layoutX="439.0" layoutY="3.0" mnemonicParsing="false" onAction="#remove" prefHeight="35.0" prefWidth="50.0" style="-fx-background-color: red;" text="🗑" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="498.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" prefWidth="50.0" style="-fx-background-color: green;" text="⟳" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#backbtn" prefHeight="31.0" prefWidth="50.0" style="-fx-background-color: blue;" text="⬅" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="Sort" layoutX="67.0" layoutY="5.0" onAction="#sortby" prefHeight="31.0" prefWidth="113.0" promptText="sortby" />
+                        <TextField fx:id="searchfld" layoutX="183.0" layoutY="5.0" onKeyTyped="#search" prefHeight="31.0" prefWidth="220.0" promptText="Enter firstname or phone to search" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <MenuBar fx:id="menubar" prefHeight="25.0" prefWidth="760.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#Quitbtn" text="Quit" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#contact" text="Contact Us" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false">
+               <graphic>
+                  <Label id="abt" onMouseClicked="#developers" text="About Us" />
+               </graphic>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Themes">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#def" text="default" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#gre" text="green" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#red" text="red" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#dark" text="dark" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

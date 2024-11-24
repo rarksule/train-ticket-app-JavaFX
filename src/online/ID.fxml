@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.IDController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutY="25.0" prefHeight="400.0" prefWidth="760.0">
+         <items>
+            <AnchorPane fx:id="side" prefHeight="398.0" prefWidth="209.0">
+               <children>
+                  <ImageView fitHeight="212.0" fitWidth="213.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@IMAGE/ICON.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="1.0" layoutY="280.0" prefHeight="61.0" prefWidth="212.0" text="TICKET CODE" textFill="#cf0a0a">
+                     <font>
+                        <Font name="Algerian" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="548.0">
+               <children>
+                  <AnchorPane fx:id="topmain" minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="548.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button fx:id="login" layoutX="216.0" layoutY="322.0" mnemonicParsing="false" onAction="#loginbtn" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: white;" text="LOGIN" textAlignment="CENTER">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="24.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endY="0.018957345971563955" startX="0.6066350710900474" startY="0.6208530805687205">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.0925113707780838" green="0.06530214101076126" blue="0.8815789222717285" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.7763158082962036" green="0.06109892949461937" blue="0.06109892949461937" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                        <Button fx:id="signup" layoutX="388.0" layoutY="322.0" mnemonicParsing="false" onAction="#signupbtn" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: FF9100;" text="SIGNUP" textFill="#1515ad">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="buy" layoutX="55.0" layoutY="322.0" mnemonicParsing="false" onAction="#buybtn" prefHeight="50.0" prefWidth="114.0" style="-fx-background-color: purple;" text="BOOK OTHER">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.8436018957345972" endY="1.0" startX="0.15165876777251186" startY="0.6161137440758294">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.729411780834198" green="0.11764705926179886" blue="0.501960813999176" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                        <Button fx:id="save" layoutX="157.0" layoutY="248.0" mnemonicParsing="false" onAction="#save" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: yellow;" text="save it on file">
+                           <font>
+                              <Font name="Britannic Bold" size="10.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.7630331753554502" endY="0.4976303317535545" startX="0.4597156398104265" startY="0.21800947867298584">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.09637333452701569" green="0.031199999153614044" blue="0.5199999809265137" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.8684210777282715" green="0.08845029026269913" blue="0.08845029026269913" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                        <Label fx:id="Id" layoutX="215.0" layoutY="147.0" prefHeight="44.0" prefWidth="293.0" textAlignment="CENTER" textFill="#1903dd">
+                           <font>
+                              <Font name="Arial Black" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label id="signtxt" layoutX="61.0" layoutY="156.0" text="your id code is :  " textAlignment="RIGHT">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label id="signtxt" alignment="CENTER" ellipsisString="rental" layoutX="102.0" layoutY="25.0" prefHeight="61.0" prefWidth="343.0" style="-fx-label-padding: 15px;" text="notice : Write down this code or save it on file" textAlignment="JUSTIFY" textOverrun="CLIP" wrapText="true">
+                           <font>
+                              <Font name="MT Extra" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="copy" layoutX="316.0" layoutY="248.0" mnemonicParsing="false" onAction="#copy" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: yellow;" text="copy on clipboard">
+                           <font>
+                              <Font name="Britannic Bold" size="10.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.7630331753554502" endY="0.4976303317535545" startX="0.4597156398104265" startY="0.21800947867298584">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.09637333452701569" green="0.031199999153614044" blue="0.5199999809265137" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.8684210777282715" green="0.08845029026269913" blue="0.08845029026269913" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                        <Button fx:id="back" mnemonicParsing="false" onAction="#backbtn" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: blue;" text="⬅" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label id="signtxt" layoutX="61.0" layoutY="205.0" text="your Seat Number is:  " textAlignment="RIGHT">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="seatno" layoutX="242.0" layoutY="197.0" prefHeight="37.0" prefWidth="70.0" textAlignment="RIGHT" textFill="#1903dd">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <MenuBar fx:id="menubar1" prefHeight="25.0" prefWidth="760.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#Quitbtn" text="Quit" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#contact" text="Contact Us" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false">
+               <graphic>
+                  <Label id="abt" onMouseClicked="#developers" text="About Us" />
+               </graphic>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Themes">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#def" text="default" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#gre" text="green" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#red" text="red" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Hyperlink onAction="#dark" text="dark" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

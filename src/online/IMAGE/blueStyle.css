@@ -1,0 +1,36 @@
+#menubar
+{
+    -fx-background-color:linear-gradient( #545c7a, #314da3);
+    -fx-color: red;
+    
+}
+#side
+{
+ -fx-background-color: linear-gradient(rgba(5, 47, 163,0.4),rgba(84, 95, 122,0.2), rgba(49, 89, 163,1));   
+}
+
+#topmain
+{
+    -fx-background-color: linear-gradient(rgba(5, 47, 163,0.4),rgba(84, 95, 122,0.2), rgba(49, 89, 163,1)); 
+}
+#textarea {
+    
+    -fx-text-fill:red; 
+}
+
+#train
+{
+   -fx-text-fill:black;  
+}
+#signtxt
+{
+    -fx-font-weight: bold; 
+}
+#abt
+{
+    -fx-text-fill:White;
+}
+
+
+
+
